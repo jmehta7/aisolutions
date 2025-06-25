@@ -2,9 +2,12 @@
 
 import { useState } from "react";
 import axios from "axios";
+import { toast } from 'react-hot-toast';
+import { useRouter } from "next/navigation";
 
 export default function AddBook() {
   const [lead, setLead] = useState({});
+  const router = useRouter()
 
   const handleChange = ({ target }) => {
     const name = target && target.name;
@@ -14,8 +17,11 @@ export default function AddBook() {
 
   const handleSubmit = async() => {
    const response = await axios.post("/api/leads",lead);
-   console.log({response})
-    // setUsers(response.data.users);
+   if(response){
+   toast.success("Lead submitted successfully");
+   }
+  return router.push("/");
+  
   };
   
   return (
