@@ -44,7 +44,7 @@ export default function AddBook() {
       />
 
       <p className="book-name">
-        Please describe the AI Agent / Project you'd like to discuss (please
+        Please describe the AI Agent / Project you did like to discuss (please
         provide as much detail as possible)
       </p>
       <input
@@ -66,7 +66,7 @@ export default function AddBook() {
           onChange={handleChange}
           className="mr-2"
         />
-        <strong>There's a specific project I want to discuss</strong><br/>
+        <strong>There are a specific project I want to discuss</strong><br/>
         <input
           type="radio"
           name="book_reason"
@@ -129,7 +129,7 @@ export default function AddBook() {
 
       <p className="book-name">
         We’re highly selective about the projects we take on to ensure we
-        deliver maximum value for our clients. To respect everyone's time, we
+        deliver maximum value for our clients. To respect everyone is time, we
         typically don’t take on projects with budgets below $5,000. Most of our
         work ranges from $6,000 to $12,000, depending on scope.
       </p>
