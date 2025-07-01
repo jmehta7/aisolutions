@@ -1250,7 +1250,7 @@ export default function Home() {
               </li>
             </ul>
             <div className="item-center">
-              <button className="partner-btn mb-6" onClick={handleClick} style={{marginTop:"24px"}}>
+              <button className="partner-btn mb-6" onClick={handleClick}>
                 Explore Omni
               </button>
             </div>
@@ -1290,7 +1290,6 @@ export default function Home() {
             <div className="item-center">
               <button
                 className="partner-btn mb-6 bg-white text-black"
-                style={{marginTop:"196px"}}
                 onClick={handleClick}
               >
                 Get a Quote
