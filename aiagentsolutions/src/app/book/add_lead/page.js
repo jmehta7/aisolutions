@@ -27,6 +27,7 @@ export default function AddBook() {
   return (
     <div className="book-container">
       <h1 className="book-title">Book a Call with us</h1>
+      <div className="sc-96a9560f-1 sc-babf4446-1 fEHMFo kPqkMF tally-form-logo book-div" data-sentry-element="RespondContainer" data-sentry-component="FormBuilderLogo" data-sentry-source-file="index.tsx"><img src="https://storage.tally.so/761cf432-d9ab-4ed5-912a-7ef474db1a31/DALL-E-2024-01-16-14.41.53---Design-a-sleek-modern-logo-for-a-company-called-Reprise-AI-.-The-logo-should-be-simple-yet-impactful-featuring-a-stylized-representation-of-a-brain.png" className="book-img-logo" alt="Form logo"/></div>
       <p className="book-name">Name</p>
       <input
         type="text"

@@ -11,12 +11,18 @@ import "swiper/css/pagination";
 import { useState } from "react";
 
 export default function Home() {
-  const router = useRouter();  
-   const [dis, setDis] = useState(false);
-   const [system, setSystem] = useState(false);
-   const [impl, setImpl] = useState(false);
-   const [patner, setPatner] = useState(false);
-   
+  const router = useRouter();
+  const [dis, setDis] = useState(false);
+  const [que1, setQue1] = useState(false);
+  const [que2, setQue2] = useState(false);
+  const [que3, setQue3] = useState(false);
+  const [que4, setQue4] = useState(false);
+  const [que5, setQue5] = useState(false);
+  const [que6, setQue6] = useState(false);
+  const [system, setSystem] = useState(false);
+  const [impl, setImpl] = useState(false);
+  const [patner, setPatner] = useState(false);
+
   const handleClick = () => {
     return router.push("/book/add_lead");
   };
@@ -295,7 +301,9 @@ export default function Home() {
               </li>
             </ul>
             <div className="item-center">
-              <button className="quote-btn mb-6" onClick={handleClick}>Get a Quote</button>
+              <button className="quote-btn mb-6" onClick={handleClick}>
+                Get a Quote
+              </button>
             </div>
           </div>
           <div className="service-box">
@@ -389,7 +397,9 @@ export default function Home() {
               </li>
             </ul>
             <div className="item-center">
-              <button className="quote-btn mb-6" onClick={handleClick}>Get a Quote</button>
+              <button className="quote-btn mb-6" onClick={handleClick}>
+                Get a Quote
+              </button>
             </div>
           </div>
           <div className="service-box omni-box">
@@ -493,10 +503,10 @@ export default function Home() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto p-8">
-          <div className="border border-slate-200 rounded-lg bg-white overflow-hidden">
+          <div className="border border-slate-200 rounded-lg bg-white overflow-hidden proven-border">
             <div className="p-6">
               <div className="flex items-center gap-4 mb-4">
-                <div class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-white">
+                <div className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -507,7 +517,7 @@ export default function Home() {
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-search w-5 h-5"
+                    className="lucide lucide-search w-5 h-5"
                   >
                     <circle cx="11" cy="11" r="8"></circle>
                     <path d="m21 21-4.3-4.3"></path>
@@ -523,12 +533,12 @@ export default function Home() {
                 alignment. In this first phase, we focus on understanding your
                 business from the inside out and determining if we are the right
                 fit to work together. We:
-              </p>              
+              </p>
               <button
-                class="flex items-center justify-between w-full px-4 bg-slate-50 rounded-md border-size"
+                className="flex items-center justify-between w-full px-4 bg-slate-50 rounded-md border-size"
                 onClick={() => setDis(!dis)}
               >
-                <span class="font-medium toggle-font">Hide Details</span>
+                <span className="font-medium toggle-font">Hide Details</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -539,7 +549,7 @@ export default function Home() {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-chevron-down w-5 h-5 transition-transform"
+                  className="lucide lucide-chevron-down w-5 h-5 transition-transform"
                 >
                   <path d="m6 9 6 6 6-6"></path>
                 </svg>
@@ -623,10 +633,10 @@ export default function Home() {
               )}
             </div>
           </div>
-          <div className="border border-slate-200 rounded-lg bg-white overflow-hidden">
+          <div className="border border-slate-200 rounded-lg bg-white overflow-hidden proven-border">
             <div className="p-6">
               <div className="flex items-center gap-4 mb-4">
-                <div class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-white">
+                <div className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -637,7 +647,7 @@ export default function Home() {
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-lightbulb w-5 h-5"
+                    className="lucide lucide-lightbulb w-5 h-5"
                   >
                     <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
                     <path d="M9 18h6"></path>
@@ -657,11 +667,11 @@ export default function Home() {
                 blueprint for the systems we propose, while also providing
                 upfront value to demonstrate feasibility. Here is what we do:
               </p>
-             <button
-                class="flex items-center justify-between w-full px-4 bg-slate-50 rounded-md border-size"
+              <button
+                className="flex items-center justify-between w-full px-4 bg-slate-50 rounded-md border-size"
                 onClick={() => setSystem(!system)}
               >
-                <span class="font-medium toggle-font">Hide Details</span>
+                <span className="font-medium toggle-font">Hide Details</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -672,98 +682,98 @@ export default function Home() {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-chevron-down w-5 h-5 transition-transform"
+                  className="lucide lucide-chevron-down w-5 h-5 transition-transform"
                 >
                   <path d="m6 9 6 6 6-6"></path>
                 </svg>
               </button>
-               {system && (
+              {system && (
                 <>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start">
-                  <div className="mr-3 mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      className="service-list-svg"
-                    >
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </svg>
-                  </div>
-                  <span className="text-sm text-slate-700">
-                    Map the systems and processes: Gain clarity on the
-                    workflows, data integrations needed to build an effective
-                    solution.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-3 mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      className="service-list-svg"
-                    >
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </svg>
-                  </div>
-                  <span className="text-sm text-slate-700">
-                    Visualize the architecture: Design and refine the structure
-                    of the solution, ensuring it aligns with your business goals
-                    and constraints.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-3 mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      className="service-list-svg"
-                    >
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </svg>
-                  </div>
-                  <span className="text-sm text-slate-700">
-                    Collaborate on the approach: Share visuals, detailed
-                    mappings, and workflows to ensure mutual understanding of
-                    the proposed design.
-                  </span>
-                </li>
-              </ul>
-              <p className="text-sm text-slate-600 italic mt-4">
-                This phase ensures that both parties have a crystal-clear
-                picture of how the solution will be structured and implemented,
-                validating the concept and approach before proceeding to
-                execution.
-              </p>
-              </>
-               )}
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-start">
+                      <div className="mr-3 mt-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          className="service-list-svg"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                      </div>
+                      <span className="text-sm text-slate-700">
+                        Map the systems and processes: Gain clarity on the
+                        workflows, data integrations needed to build an
+                        effective solution.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="mr-3 mt-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          className="service-list-svg"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                      </div>
+                      <span className="text-sm text-slate-700">
+                        Visualize the architecture: Design and refine the
+                        structure of the solution, ensuring it aligns with your
+                        business goals and constraints.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="mr-3 mt-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          className="service-list-svg"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                      </div>
+                      <span className="text-sm text-slate-700">
+                        Collaborate on the approach: Share visuals, detailed
+                        mappings, and workflows to ensure mutual understanding
+                        of the proposed design.
+                      </span>
+                    </li>
+                  </ul>
+                  <p className="text-sm text-slate-600 italic mt-4">
+                    This phase ensures that both parties have a crystal-clear
+                    picture of how the solution will be structured and
+                    implemented, validating the concept and approach before
+                    proceeding to execution.
+                  </p>
+                </>
+              )}
             </div>
           </div>
-          <div className="border border-slate-200 rounded-lg bg-white overflow-hidden">
+          <div className="border border-slate-200 rounded-lg bg-white overflow-hidden proven-border">
             <div className="p-6">
               <div className="flex items-center gap-4 mb-4">
-                <div class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-white">
+                <div className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -774,7 +784,7 @@ export default function Home() {
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-zap w-5 h-5"
+                    className="lucide lucide-zap w-5 h-5"
                   >
                     <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
                   </svg>
@@ -790,11 +800,11 @@ export default function Home() {
                 system is integrated seamlessly into your operations. During
                 this phase, we:
               </p>
-             <button
-                class="flex items-center justify-between w-full px-4 bg-slate-50 rounded-md border-size"
+              <button
+                className="flex items-center justify-between w-full px-4 bg-slate-50 rounded-md border-size"
                 onClick={() => setImpl(!impl)}
               >
-                <span class="font-medium toggle-font">Hide Details</span>
+                <span className="font-medium toggle-font">Hide Details</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -805,93 +815,94 @@ export default function Home() {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-chevron-down w-5 h-5 transition-transform"
+                  className="lucide lucide-chevron-down w-5 h-5 transition-transform"
                 >
                   <path d="m6 9 6 6 6-6"></path>
                 </svg>
               </button>
               {impl && (
                 <>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start">
-                  <div className="mr-3 mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      className="service-list-svg"
-                    >
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </svg>
-                  </div>
-                  <span className="text-sm text-slate-700">
-                    Build the complete system, ensuring all components are
-                    aligned and functioning cohesively.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-3 mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      className="service-list-svg"
-                    >
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </svg>
-                  </div>
-                  <span className="text-sm text-slate-700">
-                    Integrate the solution with your existing technology stack
-                    to enable smooth and efficient workflows.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-3 mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      className="service-list-svg"
-                    >
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </svg>
-                  </div>
-                  <span className="text-sm text-slate-700">
-                    Provide training and resources to empower your team to
-                    maximize the solution is potential.
-                  </span>
-                </li>
-              </ul>
-              <p className="text-sm text-slate-600 italic mt-4">
-                The outcome is a fully operational, scalable system that drives
-                measurable results and boosts efficiency across your business.
-              </p>
-              </>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-start">
+                      <div className="mr-3 mt-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          className="service-list-svg"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                      </div>
+                      <span className="text-sm text-slate-700">
+                        Build the complete system, ensuring all components are
+                        aligned and functioning cohesively.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="mr-3 mt-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          className="service-list-svg"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                      </div>
+                      <span className="text-sm text-slate-700">
+                        Integrate the solution with your existing technology
+                        stack to enable smooth and efficient workflows.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="mr-3 mt-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          className="service-list-svg"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                      </div>
+                      <span className="text-sm text-slate-700">
+                        Provide training and resources to empower your team to
+                        maximize the solution is potential.
+                      </span>
+                    </li>
+                  </ul>
+                  <p className="text-sm text-slate-600 italic mt-4">
+                    The outcome is a fully operational, scalable system that
+                    drives measurable results and boosts efficiency across your
+                    business.
+                  </p>
+                </>
               )}
             </div>
           </div>
-          <div className="border border-slate-200 rounded-lg bg-white overflow-hidden">
+          <div className="border border-slate-200 rounded-lg bg-white overflow-hidden proven-border">
             <div className="p-6">
               <div className="flex items-center gap-4 mb-4">
-                <div class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-white">
+                <div className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -902,7 +913,7 @@ export default function Home() {
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-shield w-5 h-5"
+                    className="lucide lucide-shield w-5 h-5"
                   >
                     <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
                   </svg>
@@ -918,11 +929,11 @@ export default function Home() {
                 ensure your systems evolve with your business. This phase
                 includes:
               </p>
-             <button
-                class="flex items-center justify-between w-full px-4 bg-slate-50 rounded-md border-size"
+              <button
+                className="flex items-center justify-between w-full px-4 bg-slate-50 rounded-md border-size"
                 onClick={() => setPatner(!patner)}
               >
-                <span class="font-medium toggle-font">Hide Details</span>
+                <span className="font-medium toggle-font">Hide Details</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -933,91 +944,653 @@ export default function Home() {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-chevron-down w-5 h-5 transition-transform"
+                  className="lucide lucide-chevron-down w-5 h-5 transition-transform"
                 >
                   <path d="m6 9 6 6 6-6"></path>
                 </svg>
               </button>
               {patner && (
                 <>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start">
-                  <div className="mr-3 mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      className="service-list-svg"
-                    >
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </svg>
-                  </div>
-                  <span className="text-sm text-slate-700">
-                    Continuous monitoring and performance optimization to meet
-                    changing needs.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-3 mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      className="service-list-svg"
-                    >
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </svg>
-                  </div>
-                  <span className="text-sm text-slate-700">
-                    Establishing feedback loops to adapt and improve the
-                    solution over time.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <div className="mr-3 mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      className="service-list-svg"
-                    >
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </svg>
-                  </div>
-                  <span className="text-sm text-slate-700">
-                    Proactively identifying and proposing enhancements or
-                    additional builds to unlock new opportunities.
-                  </span>
-                </li>
-              </ul>
-              <p className="text-sm text-slate-600 italic mt-4">
-                By staying adaptable and innovative, we ensure your business
-                stays ahead of the curve and achieves long-term success.
-              </p>
-              </>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-start">
+                      <div className="mr-3 mt-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          className="service-list-svg"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                      </div>
+                      <span className="text-sm text-slate-700">
+                        Continuous monitoring and performance optimization to
+                        meet changing needs.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="mr-3 mt-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          className="service-list-svg"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                      </div>
+                      <span className="text-sm text-slate-700">
+                        Establishing feedback loops to adapt and improve the
+                        solution over time.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="mr-3 mt-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          className="service-list-svg"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                      </div>
+                      <span className="text-sm text-slate-700">
+                        Proactively identifying and proposing enhancements or
+                        additional builds to unlock new opportunities.
+                      </span>
+                    </li>
+                  </ul>
+                  <p className="text-sm text-slate-600 italic mt-4">
+                    By staying adaptable and innovative, we ensure your business
+                    stays ahead of the curve and achieves long-term success.
+                  </p>
+                </>
               )}
             </div>
           </div>
         </div>
       </section>
+      <section className="partner-section">
+        <div className="user-solution">
+          <h1 className="solution-support">
+            Partner with Us and Invest in Your Business
+          </h1>
+        </div>
+        <div className="service-detail">
+          <div className="service-box">
+            <p>Retainer Partnership Model</p>
+            <h1>$4000/m</h1>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <div className="mr-2 mt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="service-list-svg"
+                  >
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                <div className="text-sm text-slate-700 partner-top">
+                  <div className="partner-header">
+                    Comprehensive AI Systems Development
+                  </div>
+                  <p className="partner-size">
+                    Custom solutions tailored to your business needs
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="mr-2 mt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="service-list-svg"
+                  >
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                <div className="text-sm text-slate-700 partner-top">
+                  <div className="partner-header">
+                    Access to a Dedicated AI Development Team
+                  </div>
+                  <p className="partner-size">
+                    Custom solutions tailored to your business needs
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="mr-2 mt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="service-list-svg"
+                  >
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                <div className="text-sm text-slate-700 partner-top">
+                  <div className="partner-header">
+                    Proactive Strategy Alignment
+                  </div>
+                  <p className="partner-size">
+                    Weekly check-ins to ensure optimal results
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="mr-2 mt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="service-list-svg"
+                  >
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                <div className="text-sm text-slate-700 partner-top">
+                  <div className="partner-header">Priority Support</div>
+                  <p className="partner-size">
+                    Custom solutions tailored to your business needs
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <div className="item-center">
+              <button className="partner-btn mb-6" onClick={handleClick}>
+                Get a Quote
+              </button>
+            </div>
+          </div>
+          <div className="service-box">
+            <p>Omni Sales System</p>
+            <h1>$700/m</h1>
+            <p>+ one-time setup fee</p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <div className="mr-2 mt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="service-list-svg"
+                  >
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                <div className="text-sm text-slate-700 partner-top">
+                  <div className="partner-header">24/7 AI Sales Agent</div>
+                  <p className="partner-size">
+                    Qualifies and nurtures leads automatically
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="mr-2 mt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="service-list-svg"
+                  >
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                <div className="text-sm text-slate-700 partner-top">
+                  <div className="partner-header">
+                    Multi-Channel Communication
+                  </div>
+                  <p className="partner-size">Email, SMS, chat, and more</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="mr-2 mt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="service-list-svg"
+                  >
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                <div className="text-sm text-slate-700 partner-top">
+                  <div className="partner-header">Calendar Integration</div>
+                  <p className="partner-size">Automated appointment booking</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="mr-2 mt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="service-list-svg"
+                  >
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                <div className="text-sm text-slate-700 partner-top">
+                  <div className="partner-header">Performance Analytics</div>
+                  <p className="partner-size">
+                    Track and optimize your results
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <div className="item-center">
+              <button className="partner-btn mb-6" onClick={handleClick} style={{marginTop:"24px"}}>
+                Explore Omni
+              </button>
+            </div>
+          </div>
+          <div className="service-box bg-black">
+            <p className="text-gray">Ad-hoc</p>
+            <h1 className="text-white text-3xl">One-Off Project Basis</h1>
+            <p className="text-gray">
+              Designed for businesses that want to start with a single agent or
+              system.
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <div className="mr-2 mt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="service-list-svg text-white"
+                  >
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                <div className="text-sm text-slate-700 partner-top">
+                  <div className="partner-header text-white">
+                    30-60 day turnaround
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div className="item-center">
+              <button
+                className="partner-btn mb-6 bg-white text-black"
+                style={{marginTop:"196px"}}
+                onClick={handleClick}
+              >
+                Get a Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="frequently-section">
+        <div className="frequently-solution">
+          <h1 className="solution-support">Frequently Asked Questions</h1>
+          <p className="solution-desc">
+            Get answers to common questions about our AI solutions
+          </p>
+        </div>
+        <div className="max-w-3xl mx-auto space-y-4">
+          <div className="border border-slate-200 rounded-lg bg-white overflow-hidden frequent-bg">
+            <button
+              className="flex items-center justify-between w-full p-6 text-left frequent-btn"
+              onClick={() => {
+                setQue1(!que1);
+              }}
+            >
+              <span className="font-medium que1-title">
+                Do you work on one-off projects?
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="lucide lucide-chevron-down w-5 h-6 transition-transform rotate-180"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+            {que1 && (
+              <div className="px-6 pb-6 text-slate-600 border-0 frequent-desc">
+                Yes, we do work on one-off projects. Our ad-hoc service is
+                designed for businesses that want to start with a single agent
+                or system. We typically deliver these projects within a 30-60
+                day timeframe, depending on complexity.
+              </div>
+            )}
+          </div>
+          <div className="border border-slate-200 rounded-lg bg-white overflow-hidden frequent-bg">
+            <button
+              className="flex items-center justify-between w-full p-6 text-left frequent-btn"
+              onClick={() => {
+                setQue2(!que2);
+              }}
+            >
+              <span className="font-medium que1-title">
+                How do you price your services?
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="lucide lucide-chevron-down w-5 h-6 transition-transform rotate-180"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+            {que2 && (
+              <div className="px-6 pb-6 text-slate-600 border-0 frequent-desc">
+                We offer two pricing models: a retainer partnership at
+                $4,000/month for comprehensive AI systems development with
+                ongoing support, and a one-off project basis with custom pricing
+                based on project scope and requirements. We provide detailed
+                quotes after understanding your specific needs.
+              </div>
+            )}
+          </div>
+          <div className="border border-slate-200 rounded-lg bg-white overflow-hidden frequent-bg">
+            <button
+              className="flex items-center justify-between w-full p-6 text-left frequent-btn"
+              onClick={() => {
+                setQue3(!que3);
+              }}
+            >
+              <span className="font-medium que1-title">
+                How long does it take to create an AI solution?
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="lucide lucide-chevron-down w-5 h-6 transition-transform rotate-180"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+            {que3 && (
+              <div className="px-6 pb-6 text-slate-600 border-0 frequent-desc">
+                The timeline varies based on complexity, but typically ranges
+                from 30-60 days for initial implementation. Our process includes
+                discovery, system design, implementation, and ongoing
+                partnership phases to ensure optimal results.
+              </div>
+            )}
+          </div>
+          <div className="border border-slate-200 rounded-lg bg-white overflow-hidden frequent-bg">
+            <button
+              className="flex items-center justify-between w-full p-6 text-left frequent-btn"
+              onClick={() => {
+                setQue4(!que4);
+              }}
+            >
+              <span className="font-medium que1-title">
+                I am not sure where to start—what do you recommend?
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="lucide lucide-chevron-down w-5 h-6 transition-transform rotate-180"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+            {que4 && (
+              <div className="px-6 pb-6 text-slate-600 border-0 frequent-desc">
+                We recommend starting with a discovery call where we can
+                understand your business challenges and goals. This allows us to
+                identify the most impactful opportunities for AI automation and
+                provide tailored recommendations for your specific situation.
+              </div>
+            )}
+          </div>
+          <div className="border border-slate-200 rounded-lg bg-white overflow-hidden frequent-bg">
+            <button
+              className="flex items-center justify-between w-full p-6 text-left frequent-btn"
+              onClick={() => {
+                setQue5(!que5);
+              }}
+            >
+              <span className="font-medium que1-title">
+                How do your solutions improve business operations?
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="lucide lucide-chevron-down w-5 h-6 transition-transform rotate-180"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+            {que5 && (
+              <div className="px-6 pb-6 text-slate-600 border-0 frequent-desc">
+                Our AI solutions automate repetitive tasks, streamline
+                workflows, and provide data-driven insights. This leads to
+                increased efficiency, reduced operational costs, improved
+                customer experiences, and allows your team to focus on
+                high-value strategic activities rather than manual processes.
+              </div>
+            )}
+          </div>
+          <div className="border border-slate-200 rounded-lg bg-white overflow-hidden frequent-bg">
+            <button
+              className="flex items-center justify-between w-full p-6 text-left frequent-btn"
+              onClick={() => {
+                setQue6(!que6);
+              }}
+            >
+              <span className="font-medium que1-title">
+                What happens if I am not satisfied with the results?
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="lucide lucide-chevron-down w-5 h-6 transition-transform rotate-180"
+              >
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+            {que6 && (
+              <div className="px-6 pb-6 text-slate-600 border-0 frequent-desc">
+                Customer satisfaction is our priority. If you are not satisfied
+                with the results, we will work with you to address any concerns
+                and make necessary adjustments. Our retainer model includes
+                ongoing optimization and support to ensure the solution
+                continues to meet your evolving needs.
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+      <footer className="bg-slate-900 text-white">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between mb-8">
+            <div className="mb-8 md:mb-0">
+              <div className="text-xl font-bold mb-4">
+                Sales<span className="font-light">done</span>
+              </div>
+              <p className="text-slate-400 max-w-xs">
+                Deploy AI agents to run your business on autopilot and transform
+                your operations.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+              <div>
+                <h3 className="font-semibold mb-4">Company</h3>
+                <ul className="space-y-2 footer-list">
+                  <li>
+                    <a href="#" className="text-slate-400 hover:text-white">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-slate-400 hover:text-white">
+                      Careers
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-slate-400 hover:text-white">
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-4">Resources</h3>
+                <ul className="space-y-2 footer-list">
+                  <li>
+                    <a href="#" className="text-slate-400 hover:text-white">
+                      Blog
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-slate-400 hover:text-white">
+                      Documentation
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-slate-400 hover:text-white">
+                      FAQ
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-4">Legal</h3>
+                <ul className="space-y-2 footer-list">
+                  <li>
+                    <a href="#" className="text-slate-400 hover:text-white">
+                      Privacy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-slate-400 hover:text-white">
+                      Terms
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-slate-800 pt-8 text-center text-slate-400 item-center">
+            <p>© 2025 Salesdone. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

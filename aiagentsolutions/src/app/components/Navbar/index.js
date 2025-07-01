@@ -9,7 +9,7 @@ export default function Navbar() {
       };
     return(
         <>
-        <nav className="flex-box">
+        {/* <nav className="flex-box">
             <div className="flex-container">
             <Link href="#">SalesDone</Link>
             <Link href="#">Solutions</Link>
@@ -19,10 +19,26 @@ export default function Navbar() {
              <div>
                <button className="book-btn" onClick={handleClick}>Book a Call</button>
                </div>
-        </nav>
+        </nav> */}
         {/* <div>
             <button>Book Now</button>
         </div> */}
+
+        <nav className="nav">
+  <div className="nav-left">
+    <Link href="#">SalesDone</Link>
+  </div>
+
+  <div className="nav-center">
+    <Link className="transition-colors" href="#">Solutions</Link>
+    <Link className="transition-colors" href="#">Use Cases</Link>
+    <Link className="transition-colors" href="#">Pricing</Link>
+  </div>
+
+  <div className="nav-right">
+    <button className="book-btn" onClick={handleClick}>Book a Call</button>
+  </div>
+</nav>
         </>
     )
 }
