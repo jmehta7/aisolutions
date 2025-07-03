@@ -790,8 +790,9 @@ body {
   line-height: 1.75rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-radius: 9px;
 }
 
 .book-div {
