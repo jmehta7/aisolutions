@@ -750,11 +750,12 @@ body {
   text-decoration: none;
   color: white;
   font-size: 20px;
+  margin-right: 30px;
 }
 
 .nav-center {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 2rem; /* space between links */
   flex: 1; /* take up remaining space */
 }
@@ -763,6 +764,7 @@ body {
   text-decoration: none;
   color: rgb(203 213 225);
   font-size: 18px;
+  margin-top: 3px;
 }
 
 .transition-colors {
@@ -777,7 +779,6 @@ body {
 }
 
 .book-btn {
-  padding: 0.8rem 1rem;
   background-color: white;
   color: black;
   border: 1px solid rgb(71 85 105);
@@ -785,6 +786,12 @@ body {
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .book-div {
